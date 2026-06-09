@@ -139,14 +139,15 @@ python test.py --music_dir custom_music/ --feature_type jukebox --checkpoint che
 
 
 ## Unreal Engine 5 integration
-### 1. Copy generated files to Unreal Engine
-Find your generated `.fbx` file and copy it (along with the original `.wav` file you used for generation) into the Unreal Engine `raw` folder.
+### 1. Copy generated files to Unreal Engine project
+Find your generated `.fbx` file and copy it (along with the original `.wav` file you used for generation) into the VRTemplate's `raw` folder.
 
 ### 2. Import into Unreal Engine 5
-1. Open UE5 and the **Content Drawer**, then press **Import**.
-2. Select your `.fbx` file.
-3. In the import window, go to the **Skeletal Meshes** tab, then under **Skeleton**, choose `S_Dancer` from the drop-down menu.
-4. Also import the audio file.
+1. Double-click the VRTemplate.uproject inside VRTemplate folder to open the project
+2. From the **Content Drawer** press **Import**.
+3. Select your `.fbx` file.
+4. In the import window, go to the **Skeletal Meshes** tab, then under **Skeleton**, choose `S_Dancer` from the drop-down menu.
+5. Also import the audio file.
 
 ### 3. Configure the Dancer Blueprint
 1. Navigate to the **Custom** folder in the Content Drawer.
