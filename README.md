@@ -151,7 +151,7 @@ Find your generated `.fbx` file and copy it (along with the original `.wav` file
 
 ### 3. Configure the Dancer Blueprint
 1. Navigate to the **Custom** folder in the Content Drawer.
-2. Go to **BluePrints** and open `BP_Dancer`.
+2. Go to **BluePrints** and open `BP_Dancers`.
 3. Replace the default music and animation references with your new files.
 4. Press **Save** and **Compile**.
 
