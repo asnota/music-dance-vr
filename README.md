@@ -1,7 +1,5 @@
 ## Quick Start with the Automated Setup Script
 
-> **Note:** The script automates steps 2-6 of the manual installation. You still need to install Python 3.8.10 manually first.
-
 ### Prerequisites
 1. **Python 3.8.10** installed and added to PATH  
    → [Download here](https://www.python.org/downloads/release/python-3810/)
@@ -15,8 +13,8 @@
 
 1. **Clone or download this repository:**
    ```cmd
-   git clone https://github.com/asnota/edge-setup-guide.git
-   cd edge-setup-guide
+   git clone https://github.com/asnota/music-dance-vr.git
+   cd music-dance-vr
    ```
 
 2. **Open Command Prompt as Administrator** in the repository folder.
