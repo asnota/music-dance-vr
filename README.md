@@ -1,3 +1,60 @@
+# Music-to-Dance Generation for Creating an Immersive Music-Driven VR Experience
+
+> **XR Metaverse Conference 2026 — Tallinn, Estonia**
+
+This repository hosts a **Windows + [uv](https://github.com/astral-sh/uv)** adaptation of the [EDGE](https://github.com/Stanford-TML/EDGE) music-to-dance inference pipeline. It was developed as part of a VR application built for our paper to be presented at the **XR Metaverse Conference 2026** in Tallinn (June 16-19), titled *"Music-to-Dance Generation for Creating an Immersive Music-Driven VR Experience."*
+
+## About the Project
+
+The paper explores the maturity of music-to-dance generative models for artistic applications in immersive VR environments. We evaluate three representative models — **Bailando**, **EDGE**, and **LODGE** — by analysing the trade-off between motion quality and practical deployability in **Unreal Engine 5 (UE5)**. Outputs are assessed using automated metrics capturing distributional similarity, rhythm fidelity, diversity, and physical plausibility.
+
+We find that, within current toolchain, **only EDGE supports a straightforward SMPL → FBX export and retargeting workflow into UE5**. To contextualise the practical outcome for immersive media, we also demonstrate a VR-ready case study that uses a marine scene and **Niagara particle effects** to mask residual animation limitations, accompanied by an original piano piece "Whale's hunt".
+
+**Keywords:** music-to-dance generation; multimodal generative AI; music XR; VR.
+
+## About This Repository
+
+This repository provides a **fresh, from-scratch Windows adaptation** of the EDGE inference pipeline using the modern [uv](https://github.com/astral-sh/uv) package manager rather than conda.
+
+An earlier Windows adaptation of EDGE (built with **conda**) was developed by **Yuhong Yuan** and is available here:  
+👉 [Music-to-Dance-Models-Windows-Compatible-Deployment](https://github.com/yhongowo/Music-to-Dance-Models-Windows-Compatible-Deployment)
+
+The present adaptation does **not** derive from that work — it has been re-engineered independently around `uv` for faster, reproducible, and dependency-isolated installs on Windows.
+
+### Source Modifications
+
+To ensure compatibility with the Windows + uv stack, the following EDGE source files have been modified:
+
+| File | Purpose |
+|------|---------|
+| `Model.py` | Model definition adjustments |
+| `Diffusion.py` | Diffusion process compatibility fixes |
+| `Quaternion.py` | Rotation/quaternion math compatibility |
+| `Vis.py` | Visualisation pipeline adaptations |
+
+All other EDGE components remain untouched and are pulled from the [official Stanford-TML/EDGE repository](https://github.com/Stanford-TML/EDGE).
+
+## What This Repository Provides
+
+- 🪟 **Windows-native installation** instructions (no WSL, no conda required)
+- ⚡ **`uv`-based environment management** for fast, reproducible installs
+- 🔧 **Automated `setup.bat`** to install the full ML stack
+- 🎵 **Automated `run_inference.bat`** to generate dance motions and export to `.fbx`
+- 🧹 **`uninstall.bat`** for safe cleanup
+- 🎮 **UE5 import guide** for integrating motion + audio into an immersive VR scene
+
+---
+
+## Citation
+
+If you use this Windows adaptation or refer to the accompanying case study, please cite our paper (BibTeX will be provided after publication at XR Metaverse 2026).
+
+---
+
+> Below are the installation instructions.
+
+---
+
 ## Quick Start with the Automated Setup Script
 
 ### Prerequisites
