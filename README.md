@@ -65,13 +65,15 @@ If you use this Windows adaptation or refer to the accompanying case study, plea
 3. **Microsoft MPI** (for mpi4py)  
    → [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=57467)
 4. **Blender 5.1** installed (for the FBX conversion step)
+   → [Download here](https://www.blender.org/download/)
+5. **Unreal Engine 5** installed (for generated dance visualisation and VR integration)
+   → [Download here]([https://www.blender.org/download/](https://www.unrealengine.com/download)
 
 ### How to Run the Setup Script
 
-1. **Clone or download this repository:**
+1. **Clone or download this repository by running the following command in Git bash:**
    ```cmd
    git clone https://github.com/asnota/music-dance-vr.git
-   cd music-dance-vr
    ```
 
 2. **Open Command Prompt as Administrator** in the repository folder.
@@ -94,18 +96,6 @@ If you use this Windows adaptation or refer to the accompanying case study, plea
      EDGE\custom_music\
      ```
 
-### How to Run Inference
-
-Once setup is finished, the checkpoint and music audio file are in place:
-
-```cmd
-run_inference.bat
-```
-
-The generated `.fbx` files will appear in `EDGE\SMPL-to-FBX\fbx_out\`.
-
-> **Important:** If your Blender install path differs from `C:\Program Files\Blender Foundation\Blender 5.1\blender.exe`, edit `run_inference.bat` to match your installed version.
-
 ---
 
 ## Troubleshooting
@@ -118,10 +108,12 @@ The generated `.fbx` files will appear in `EDGE\SMPL-to-FBX\fbx_out\`.
 | Blender command fails | Update the Blender path inside `run_inference.bat` |
 ---
 
-## Instructions to Run the Script outside of the `run_inference.bat`
+## How to Run Inference
+
+Once setup is finished, the checkpoint and music audio file are in place:
 
 ### 1. Activate the Environment
-From the git folder, run:
+From the cloned folder, run:
 ```cmd
 edge-env3_8\Scripts\activate
 ```
@@ -136,6 +128,9 @@ Place your `.wav` files inside the `custom_music` folder (located in the EDGE ro
 ```cmd
 python test.py --music_dir custom_music/ --feature_type jukebox --checkpoint checkpoint/checkpoint.pt --save_motions && cd SMPL-to-FBX && for %I in (motions\*.pkl) do "C:\Program Files\Blender Foundation\Blender 5.1\blender.exe" --background --python blender_script.py -- --input "%I" --template ybot.fbx --output "fbx_out\%~nI.fbx" && cd ..
 ```
+The generated `.fbx` files will appear in `EDGE\SMPL-to-FBX\fbx_out\`.
+
+> **Important:** If your Blender install path differs from `C:\Program Files\Blender Foundation\Blender 5.1\blender.exe`, edit `run_inference.bat` to match your installed version.
 
 
 ## Unreal Engine 5 integration
