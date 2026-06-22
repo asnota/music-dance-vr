@@ -8,7 +8,7 @@ This repository hosts a **Windows + [uv](https://github.com/astral-sh/uv)** adap
 
 The paper explores the maturity of music-to-dance generative models for artistic applications in immersive VR environments. We evaluate three representative models — **Bailando**, **EDGE**, and **LODGE** — by analysing the trade-off between motion quality and practical deployability in **Unreal Engine 5 (UE5)**. Outputs are assessed using automated metrics capturing distributional similarity, rhythm fidelity, diversity, and physical plausibility.
 
-We find that, within current toolchain, **only EDGE supports a straightforward SMPL → FBX export and retargeting workflow into UE5**. To contextualise the practical outcome for immersive media, we also demonstrate a VR-ready case study that uses a marine scene and **Niagara particle effects** to mask residual animation limitations, accompanied by an original piano piece "Whale's hunt".
+We find that, within current toolchain, **only EDGE supports a straightforward SMPL → FBX export and retargeting workflow into UE5**. To contextualise the practical outcome for immersive media, we also demonstrate a VR-ready case study that uses **Niagara particle effects** to mask residual animation limitations, accompanied by an original piano piece "Whale's hunt".
 
 **Keywords:** music-to-dance generation; multimodal generative AI; music XR; VR.
 
@@ -39,7 +39,7 @@ All other EDGE components remain untouched and are pulled from the [official Sta
 - 🪟 **Windows-native installation** instructions (no WSL, no conda required)
 - ⚡ **`uv`-based environment management** for fast, reproducible installs
 - 🔧 **Automated `setup.bat`** to install the full ML stack
-- 🎵 **Automated `run_inference.bat`** to generate dance motions and export to `.fbx`
+- 🎵 **Reproducible inference pipline** to generate dance motions and export to `.fbx`
 - 🧹 **`uninstall.bat`** for safe cleanup
 - 🎮 **UE5 import guide** for integrating motion + audio into an immersive VR scene
 
