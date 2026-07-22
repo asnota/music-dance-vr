@@ -126,7 +126,7 @@ set CUDA_VISIBLE_DEVICES="" && cd EDGE
 ### 3. Generate Motion
 Place your `.wav` files inside the `custom_music` folder (located in the EDGE root folder) and run:
 ```cmd
-python test.py --music_dir custom_music/ --feature_type jukebox --checkpoint checkpoint/checkpoint.pt --save_motions && cd SMPL-to-FBX && for %I in (motions\*.pkl) do "C:\Program Files\Blender Foundation\Blender 5.1\blender.exe" --background --python blender_script.py -- --input "%I" --template ybot.fbx --output "fbx_out\%~nI.fbx" && cd ..
+python test.py --music_dir custom_music/ --feature_type jukebox --checkpoint checkpoint/checkpoint.pt --save_motions && cd SMPL-to-FBX && for %I in (motions\*.pkl) do "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" --background --python blender_script.py -- --input "%I" --template ybot.fbx --output "fbx_out\%~nI.fbx" && cd ..
 ```
 The generated `.fbx` files will appear in `EDGE\SMPL-to-FBX\fbx_out\`.
 
